@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'accord du participe passé – Exercices de Sid KHALIFA</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bleu:#1d4e89;--bleu2:#2f6fb5;--ciel:#e8f1fb;--orange:#e8792b;--jaune:#fff6d6;--papier:#fdfcf7;--encre:#24303f;--vert:#1f8a4c;--vertc:#e3f6ea;--rouge:#c8322f;--rougec:#fde8e7;--ligne:#d9e3ef}
+*{box-sizing:border-box}
+body{margin:0;background:#eef2f7;font-family:'Open Sans',sans-serif;color:var(--encre);line-height:1.6}
+.page{max-width:960px;margin:24px auto;background:var(--papier);box-shadow:0 8px 30px rgba(20,40,80,.15);border-radius:6px;overflow:hidden;position:relative}
+.page:before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:linear-gradient(var(--orange),var(--bleu))}
+header{display:flex;align-items:center;gap:24px;padding:24px 36px;border-bottom:4px solid var(--bleu);background:#fff}
+header img{width:150px;height:auto;display:block}
+header h1{font-family:'Merriweather',serif;font-weight:900;color:var(--bleu);margin:0;font-size:2rem;line-height:1.2}
+header .chap{display:inline-block;background:var(--orange);color:#fff;font-weight:700;padding:2px 12px;border-radius:3px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+header .auteur{margin-top:6px;font-family:'Kalam',cursive;font-size:1.2rem;color:var(--orange)}
+main{padding:24px 36px 36px 46px}
+.rappel{background:var(--jaune);border-left:6px solid #e5b82b;padding:12px 18px;border-radius:4px;margin-bottom:24px;font-size:.95rem}
+.rappel b{color:#9a6a00}
+section.ex{margin-bottom:30px;border:1px solid var(--ligne);border-radius:6px;background:#fff}
+section.ex h2{margin:0;font-family:'Merriweather',serif;font-size:1.1rem;background:var(--ciel);color:var(--bleu);padding:10px 16px;border-bottom:2px solid var(--bleu2)}
+section.ex h2 .num{background:var(--bleu);color:#fff;border-radius:50%;display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;margin-right:10px}
+.consigne{padding:8px 16px 0;font-style:italic;color:#4b5b70}
+ol{padding:6px 16px 12px 46px;margin:0}
+ol li{padding:8px 0;border-bottom:1px dashed var(--ligne)}
+ol li:last-child{border-bottom:none}
+.hint{color:#7a8798;font-size:.85em}
+input.pp{font-family:'Kalam',cursive;font-size:1.1rem;border:none;border-bottom:2px solid var(--bleu2);background:var(--ciel);width:130px;padding:0 6px;color:var(--bleu);border-radius:3px 3px 0 0;outline:none}
+input.pp:focus{background:#d7e7f8}
+select{font-family:inherit;border:2px solid var(--bleu2);border-radius:4px;padding:2px 4px;background:#fff;color:var(--bleu)}
+.ok{background:var(--vertc)!important;border-color:var(--vert)!important;color:var(--vert)!important}
+.ko{background:var(--rougec)!important;border-color:var(--rouge)!important;color:var(--rouge)!important}
+.mot{cursor:pointer;padding:1px 0;border-radius:3px;border-bottom:2px solid transparent}
+.mot:hover{background:#fff1e3}
+.mot.sel{background:#ffd9b3;border-bottom-color:var(--orange);font-weight:700}
+.mot.sel.ok,.mot.sel.ko{border-bottom:2px solid}
+.mot.manque{outline:2px dashed var(--rouge)}
+.ligne5{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px;font-size:.92rem;align-items:center}
+.ligne5 label{cursor:pointer}
+.radios{padding:3px 8px;border:2px solid var(--ligne);border-radius:4px}
+.fb{font-size:.85rem;font-weight:700;margin-left:4px}
+.barre{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding:20px 0;border-top:3px double var(--ligne)}
+button{font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:10px 20px;border:none;border-radius:30px;cursor:pointer;color:#fff;box-shadow:0 3px 0 rgba(0,0,0,.2)}
+button:active{transform:translateY(2px);box-shadow:none}
+.b1{background:var(--bleu)}.b2{background:var(--orange)}.b3{background:#6b7a8f}.b4{background:var(--vert)}
+#score{text-align:center;font-family:'Merriweather',serif;font-size:1.3rem;color:var(--bleu);min-height:1.5em}
+#corrige{display:none;margin-top:10px;background:#fff;border:2px solid var(--vert);border-radius:6px;padding:10px 24px}
+#corrige h2{font-family:'Merriweather',serif;color:var(--vert)}
+#corrige h3{font-family:'Merriweather',serif;color:var(--bleu);border-bottom:2px solid var(--ciel);padding-bottom:4px}
+#corrige li{margin-bottom:8px}
+#corrige .rep{color:var(--vert);font-weight:700}
+footer{text-align:center;padding:14px;font-size:.85rem;color:#7a8798;border-top:1px solid var(--ligne)}
+@media (max-width:640px){header{flex-direction:column;text-align:center}main{padding:16px}}
+@media print{.barre{display:none}#corrige{display:block}}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <img src="data:image/jpeg;base64,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" alt="Logo Fransid – Professeur de français">
+  <div>
+    <span class="chap">Grammaire · Orthographe</span>
+    <h1>L'accord du participe passé</h1>
+    <div class="auteur">Un exercice de Sid KHALIFA</div>
+  </div>
+</header>
+<main>
+<div class="rappel"><b>À retenir :</b> avec <b>être</b>, le participe passé s'accorde avec le <b>sujet</b>. Avec <b>avoir</b>, il s'accorde avec le <b>COD</b> seulement si celui-ci est placé <b>avant</b> le verbe. Pour les verbes <b>pronominaux</b>, on cherche le COD : s'il est placé avant (souvent <i>se</i>), on accorde ; s'il est après, on n'accorde pas.</div>
+<div id="exos"></div>
+<div id="score"></div>
+<div class="barre">
+  <button class="b1" onclick="verifierTout()">✔ Vérifier mes réponses</button>
+  <button class="b3" onclick="recommencer()">↺ Recommencer</button>
+  <button class="b2" onclick="telecharger()">⬇ Télécharger l'exercice</button>
+  <button class="b4" onclick="basculerCorrige()">📖 Corrigé détaillé</button>
+</div>
+<div id="corrige"></div>
+</main>
+<footer>© Sid KHALIFA – Fransid, professeur de français</footer>
+</div>
+<script>
+// [verbe|réponse1/réponse2]  {COD}  ((pronom gras|COD ou COI))
+const EX=[
+ {t:"Accordez si nécessaire les participes passés entre parenthèses.",l:[
+  "Les fleurs que tu m'as [offert|offertes] sont splendides.",
+  "Les cours que tu as [suivi|suivis] étaient-ils intéressants ?",
+  "Elle a [réaménagé|réaménagé] sa chambre de fond en comble !",
+  "J'ai [cherché|cherché] tes clés dans le salon mais je ne les ai pas [trouvé|trouvées].",
+  "J'ai croisé la voisine. Je lui ai [parlé|parlé] de la fête que nous avons [organisé|organisée] et me suis [excusé|excusé/excusée] pour le bruit."]},
+ {t:"Mettez les infinitifs au mode participe et accordez-les si nécessaire.",l:[
+  "Elle a [passer|passé] la journée à réviser.",
+  "Mme Dupuy a [rendre|rendu] les copies aujourd'hui.",
+  "La copie qu'elle a [rendre|rendue] à Hortense était plutôt réussie.",
+  "Elle s'est [approcher|approchée] d'Hortense et lui a [rendre|rendu] sa copie.",
+  "Volley, badminton, rugby : tous ces sports, il les a [pratiquer|pratiqués] durant l'année.",
+  "Myriam a longtemps [attendre|attendu] la venue de sa sœur qu'elle n'a pas [voir|vue] depuis très longtemps."]},
+ {t:"a) Repérez si le pronom en gras est COD ou COI. b) Mettez le verbe entre parenthèses au participe passé et accordez-le si nécessaire.",l:[
+  "Ses chaussures, elle ((les|COD)) a [ranger|rangées] dans le garage car elles étaient [mouiller|mouillées].",
+  "Ils ((lui|COI)) ont [donner|donné] cent-trente-cinq euros pour qu'il s'achète une guitare.",
+  "Le carton rempli de livres ? Émile ((l'|COD))a [descendre|descendu] dans la cave du sous-sol.",
+  "Ma fiancée ? Ma mère ((l'|COD))a [adorer|adorée] dès leur première rencontre !",
+  "Ils ((lui|COI)) ont [demander|demandé] des explications sur ce qu'il venait d'écrire."]},
+ {t:"Accordez si nécessaire les participes passés de ces deux verbes pronominaux.",l:[
+  "Méline s'est [lavé|lavé] le visage, puis s'est [regardé|regardée] attentivement dans la glace."]},
+ {t:"a) Cliquez sur le ou les COD et indiquez si le verbe est pronominal ou non. b) Écrivez les verbes au participe passé et accordez-les si nécessaire.",cod:true,l:[
+  {s:"Elle a [acheter|acheté] {une poire} et {l'}a [mordre|mordue] à pleines dents.",p:"non"},
+  {s:"Hortense et Charlotte ont [découvrir|découvert] {un nouveau parc} à côté du collège.",p:"non"},
+  {s:"Elle s'est [mordre|mordu] {la lèvre} en courant attraper le bus.",p:"oui"},
+  {s:"Julia a [écrire|écrit] à sa chanteuse préférée : elle {l'}a [voir|vue] en concert.",p:"non"},
+  {s:"Si elle avait [être|été] un garçon, elle {les} aurait [battre|battus/battues] à la course.",p:"non"},
+  {s:"Elles {se} sont [rencontrer|rencontrées] en bas de l'immeuble.",p:"oui"},
+  {s:"Cette inscription s'est [effacer|effacée] avec le temps.",p:"oui"},
+  {s:"Roméo et Juliette {se} sont [aimer|aimés] jusqu'à la mort.",p:"oui"}]}
+];
+const CORR=[
+ ["<span class=rep>offertes</span> : auxiliaire avoir, COD « que » (= les fleurs, fém. plur.) placé avant → accord.",
+  "<span class=rep>suivis</span> : COD « que » (= les cours, masc. plur.) placé avant → accord.",
+  "<span class=rep>réaménagé</span> : COD « sa chambre » placé après le verbe → pas d'accord.",
+  "<span class=rep>cherché</span> : COD « tes clés » après → invariable. <span class=rep>trouvées</span> : COD « les » (= les clés) avant → fém. plur.",
+  "<span class=rep>parlé</span> : « lui » est COI (parler à quelqu'un) → pas d'accord. <span class=rep>organisée</span> : COD « que » (= la fête) avant → fém. sing. <span class=rep>excusé(e)</span> : verbe pronominal, « me » est COD placé avant → accord avec « je » (masc. ou fém.)."],
+ ["<span class=rep>passé</span> : COD « la journée » après → invariable.",
+  "<span class=rep>rendu</span> : COD « les copies » après → invariable.",
+  "<span class=rep>rendue</span> : COD « que » (= la copie) avant → fém. sing.",
+  "<span class=rep>approchée</span> : verbe essentiellement pronominal (s'approcher) → accord avec le sujet « elle ». <span class=rep>rendu</span> : COD « sa copie » après ; « lui » est COI.",
+  "<span class=rep>pratiqués</span> : COD « les » (= ces sports, masc. plur.) avant → accord.",
+  "<span class=rep>attendu</span> : COD « la venue » après. <span class=rep>vue</span> : COD « qu' » (= sa sœur) avant → fém. sing."],
+ ["« les » = <b>COD</b> (ranger quelque chose) → <span class=rep>rangées</span>. Avec être : <span class=rep>mouillées</span> s'accorde avec le sujet « elles ».",
+  "« lui » = <b>COI</b> (donner à quelqu'un) → <span class=rep>donné</span> (le COD « cent-trente-cinq euros » est après).",
+  "« l' » = <b>COD</b> (= le carton, masc. sing.) → <span class=rep>descendu</span>.",
+  "« l' » = <b>COD</b> (= ma fiancée, fém. sing.) avant → <span class=rep>adorée</span>.",
+  "« lui » = <b>COI</b> (demander à quelqu'un) → <span class=rep>demandé</span>."],
+ ["<span class=rep>lavé</span> : le COD est « le visage », placé après → pas d'accord (« s' » est COI : elle a lavé le visage à elle). <span class=rep>regardée</span> : « s' » est COD (elle a regardé elle-même), placé avant → accord avec Méline."],
+ ["COD : <b>une poire</b> (après) → <span class=rep>acheté</span> ; <b>l'</b> (= la poire) avant → <span class=rep>mordue</span>. Verbe non pronominal.",
+  "COD : <b>un nouveau parc</b>, après le verbe → <span class=rep>découvert</span>. Non pronominal.",
+  "Verbe <b>pronominal</b> ; COD : <b>la lèvre</b>, placé après (« s' » est COI) → <span class=rep>mordu</span>.",
+  "« écrire à sa chanteuse » : pas de COD (COI) → <span class=rep>écrit</span>. COD <b>l'</b> (= la chanteuse) avant → <span class=rep>vue</span>. Non pronominal.",
+  "« être » n'a jamais de COD → <span class=rep>été</span>. COD <b>les</b> avant → <span class=rep>battus</span> (ou <i>battues</i> si ce sont des filles). Non pronominal.",
+  "Verbe <b>pronominal</b> (réciproque) ; COD <b>se</b> (= l'une l'autre) avant → <span class=rep>rencontrées</span>.",
+  "Verbe <b>pronominal</b> à sens passif, sans COD → accord avec le sujet « cette inscription » : <span class=rep>effacée</span>.",
+  "Verbe <b>pronominal</b> réciproque ; COD <b>se</b> avant → accord avec Roméo et Juliette (masc. plur.) : <span class=rep>aimés</span>."]
+];
+const norm=s=>s.trim().toLowerCase().replace(/[’`]/g,"'").replace(/\s+/g," ");
+function rendre(){
+ const box=document.getElementById('exos');box.innerHTML='';
+ EX.forEach((ex,i)=>{
+  const sec=document.createElement('section');sec.className='ex';
+  let h=`<h2><span class="num">${i+1}</span>Exercice ${i+1}</h2><p class="consigne">${ex.t}</p><ol>`;
+  ex.l.forEach((item,j)=>{
+   const s=typeof item==='string'?item:item.s;
+   let html=s.replace(/\(\((.+?)\|(.+?)\)\)/g,(m,w,a)=>`<b>${w}</b> <select class="cc" data-a="${a}"><option value="">—</option><option>COD</option><option>COI</option></select> `)
+    .replace(/\[(.+?)\|(.+?)\]/g,(m,v,a)=>`(<b>${v}</b>) <input class="pp" data-a="${a}" autocomplete="off" spellcheck="false">`);
+   if(ex.cod){
+    // rendre chaque mot cliquable, groupes {..} = COD
+    html=html.split(/(<input[^>]*>|<b>.*?<\/b>|\{.+?\})/).map(seg=>{
+     if(seg.startsWith('<'))return seg;
+     if(seg.startsWith('{'))return `<span class="mot" data-cod="1">${seg.slice(1,-1)}</span>`;
+     return seg.replace(/([A-Za-zÀ-ÿœ]+'?|[A-Za-zÀ-ÿœ-]+)/g,'<span class="mot">$1</span>');
+    }).join('');
+    html+=`<div class="ligne5"><span class="radios" data-a="${item.p}">Verbe pronominal ?
+      <label><input type="radio" name="p${j}" value="oui"> oui</label>
+      <label><input type="radio" name="p${j}" value="non"> non</label></span>
+      <span class="hint">Cliquez sur le(s) COD (s'il y en a).</span><span class="fb codfb"></span></div>`;
+   }
+   h+=`<li>${html}</li>`;
+  });
+  sec.innerHTML=h+'</ol>';box.appendChild(sec);
+ });
+ // corrigé
+ let c='<h2>📖 Corrigé détaillé</h2>';
+ CORR.forEach((ex,i)=>{c+=`<h3>Exercice ${i+1}</h3><ol>`+ex.map(x=>`<li>${x}</li>`).join('')+'</ol>'});
+ document.getElementById('corrige').innerHTML=c;
+ bind();
+}
+function testInput(el,force){
+ const v=norm(el.value);if(!v&&!force){el.classList.remove('ok','ko');return null}
+ const ok=el.dataset.a.split('/').some(a=>norm(a)===v);
+ el.classList.toggle('ok',ok);el.classList.toggle('ko',!ok);return ok;
+}
+function testSelect(el){if(!el.value){el.classList.remove('ok','ko');return null}const ok=el.value===el.dataset.a;el.classList.toggle('ok',ok);el.classList.toggle('ko',!ok);return ok}
+function testRadio(box){const r=box.querySelector('input:checked');if(!r)return null;const ok=r.value===box.dataset.a;box.classList.toggle('ok',ok);box.classList.toggle('ko',!ok);return ok}
+function testCod(li,show){
+ const mots=[...li.querySelectorAll('.mot')];let ok=true;
+ mots.forEach(m=>{m.classList.remove('ok','ko','manque');const c=!!m.dataset.cod,s=m.classList.contains('sel');
+  if(s){m.classList.add(c?'ok':'ko');if(!c)ok=false}else if(c){ok=false;if(show)m.classList.add('manque')}});
+ const fb=li.querySelector('.codfb');
+ if(show){fb.textContent=ok?'✔ COD bien repérés':'✘ COD à revoir';fb.style.color=ok?'var(--vert)':'var(--rouge)'}
+ return ok;
+}
+function bind(){
+ document.querySelectorAll('input.pp').forEach(el=>{
+  el.addEventListener('input',()=>{const v=norm(el.value);if(el.dataset.a.split('/').some(a=>norm(a)===v))testInput(el);else el.classList.remove('ok','ko')});
+  el.addEventListener('change',()=>testInput(el));
+ });
+ document.querySelectorAll('select.cc').forEach(el=>el.addEventListener('change',()=>testSelect(el)));
+ document.querySelectorAll('.radios').forEach(b=>b.addEventListener('change',()=>testRadio(b)));
+ document.querySelectorAll('.mot').forEach(m=>m.addEventListener('click',()=>{m.classList.toggle('sel');testCod(m.closest('li'),false)}));
+}
+function verifierTout(){
+ let t=0,b=0;
+ document.querySelectorAll('input.pp').forEach(el=>{t++;if(testInput(el,true))b++});
+ document.querySelectorAll('select.cc').forEach(el=>{t++;if(!el.value)el.classList.add('ko');else if(testSelect(el))b++});
+ document.querySelectorAll('.radios').forEach(x=>{t++;const r=testRadio(x);if(r===null)x.classList.add('ko');else if(r)b++});
+ document.querySelectorAll('.ex:last-child li').forEach(li=>{t++;if(testCod(li,true))b++});
+ const n=Math.round(b/t*200)/10;
+ document.getElementById('score').innerHTML=`Score : <b>${b} / ${t}</b> — Note : <b>${n} / 20</b>`;
+}
+function recommencer(){document.getElementById('score').textContent='';rendre();window.scrollTo({top:0,behavior:'smooth'})}
+function basculerCorrige(){const c=document.getElementById('corrige');const o=c.style.display==='block';c.style.display=o?'none':'block';if(!o)c.scrollIntoView({behavior:'smooth'})}
+function telecharger(){
+ const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML.replace(/<div id="exos">[\s\S]*?<div id="score">/,'<div id="exos"></div>\n<div id="score">');
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([html],{type:'text/html'}));
+ a.download='accord_participe_passe_Sid_KHALIFA.html';a.click();URL.revokeObjectURL(a.href);
+}
+rendre();
+</script>
+</body>
+</html>
